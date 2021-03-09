@@ -1,6 +1,9 @@
 /*
 font-family: 'Open Sans', sans-serif;
 font-family: 'Shippori Mincho', serif;
+
+ #252850 ----> NightBlue
+ #0088ff ----> DayBlue
 */
 
 /*===============================
@@ -16,6 +19,11 @@ font-family: 'Shippori Mincho', serif;
     color: white; 
     text-align: center;
     font-family: 'Open Sans', sans-serif;
+
+  }
+
+  @mixin border{
+    border-bottom: 1px solid #fff;  
   }
   
   /*===============================
@@ -26,7 +34,13 @@ font-family: 'Shippori Mincho', serif;
     padding: 15px 0px;
     input{
         padding: 5px;
-      }  
+    }
+    i{  
+        padding: 5px;
+        margin-left: 5px;
+        border: 2px solid #fff;
+        border-radius: 100%;
+    }  
   }
 
   /*===============================
@@ -36,21 +50,34 @@ font-family: 'Shippori Mincho', serif;
   section:nth-of-type(1){
     margin: 10px 0px 0px 0px;
     background: url(https://images.unsplash.com/photo-1514403831962-22c9db7393aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80) center / cover no-repeat;
-    div{
-        text-align: right;;
-        padding: 10px 20px 190px 0px;
-        p:nth-of-type(1){ 
-            font-size: 12px;
-          }
-      }
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px 0px 0px;
+    i{
+        padding-left: 10px;
+        font-size: 24px;
+    }
+    .output{
+        text-align: right;
+        padding: 0px 20px 170px 0px;
+        p:first-child{
+            padding: 0px 0px 5px 0px;
+            font-size: 20px;
+        }
+        p:last-of-type{
+            font-size: 16px;
+            padding: 0px 0px 5px 0px;
+        }
+    }
   }
+
     /*===============================
             Description
   =================================*/
 
   .description{
     padding: 20px 20px;
-    border-bottom: 1px solid #fff;  
+    @include border; 
     p{
 
       }
@@ -65,21 +92,40 @@ font-family: 'Shippori Mincho', serif;
     display:flex;
     justify-content: space-evenly;
     text-align: left;
-    border-bottom: 1px solid #fff;
+    @include border; ;
     div {
         padding: 10px 0px;
         p{
             font-size: 10px;
-          }
-          
+          } 
       }
   }
   
   /*===============================
-            Footer
+        Footer with Animation
   =================================*/
   
   footer{
-      padding: 20px 0px 0px 0px;
+    padding: 10px;
     font-family: 'Shippori Mincho', serif;
+    i{
+        animation-name: heartbeat;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+  }
+
+  @keyframes heartbeat {
+      0% , 100%{
+          transform: scale(1);
+      }
+      25%{
+          transform: scale(1.1)
+      }
+      50%{
+          transform: scale(1.2)
+      }
+      75%{
+          transform: scale(1.1)
+      }
   }
