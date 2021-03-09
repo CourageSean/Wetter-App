@@ -25,18 +25,33 @@ header {
   padding: 15px 0px; }
   header input {
     padding: 5px; }
+  header i {
+    padding: 5px;
+    margin-left: 5px;
+    border: 2px solid #fff;
+    border-radius: 100%; }
 
 /*===============================
         City-Img + Temp/City
 =================================*/
 section:nth-of-type(1) {
   margin: 10px 0px 0px 0px;
-  background: url(https://images.unsplash.com/photo-1514403831962-22c9db7393aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80) center/cover no-repeat; }
-  section:nth-of-type(1) div {
+  background: url(https://images.unsplash.com/photo-1514403831962-22c9db7393aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80) center/cover no-repeat;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px 0px 0px; }
+  section:nth-of-type(1) i {
+    padding-left: 10px;
+    font-size: 24px; }
+  section:nth-of-type(1) .output {
     text-align: right;
-    padding: 10px 20px 190px 0px; }
-    section:nth-of-type(1) div p:nth-of-type(1) {
-      font-size: 12px; }
+    padding: 0px 20px 170px 0px; }
+    section:nth-of-type(1) .output p:first-child {
+      padding: 0px 0px 5px 0px;
+      font-size: 20px; }
+    section:nth-of-type(1) .output p:last-of-type {
+      font-size: 16px;
+      padding: 0px 0px 5px 0px; }
 
   /*===============================
           Description
@@ -63,7 +78,7 @@ section:nth-of-type(1) {
       Footer with Animation
 =================================*/
 footer {
-  padding: 20px 0px 0px 0px;
+  padding: 10px;
   font-family: 'Shippori Mincho', serif; }
   footer i {
     animation-name: heartbeat;
