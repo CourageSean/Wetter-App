@@ -11,6 +11,7 @@ let tempMin = document.getElementById("temp-min")
 let outputTemp = document.getElementById("output-temperature")
 let outputCity = document.getElementById("output-city-name")
 let descriptionHeute = document.getElementById("description-heute")
+let input = document.getElementById("give-city")
 
 
 submit.addEventListener("click", function (event) {
