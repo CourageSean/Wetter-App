@@ -20,7 +20,7 @@ submit.addEventListener("click", function (event) {
     //     event.preventDefault();
     //     submit.click();
     // }
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${input.value}&appid=c6ad1b47b475ec9cd5ea1829f6fed753&lang=de`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input.value}&appid=c6ad1b47b475ec9cd5ea1829f6fed753&lang=de`)
         .then(response => response.json())
         .then(data => {
             let name = data['name']
