@@ -5,7 +5,6 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="assets/css/style.css" />
   <title>Weather App</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet"
@@ -16,55 +15,92 @@
 </head>
 
 <body>
-  <!-- Give City -->
+
+  <!-- ===Give City=== -->
+
   <header>
     <input type="text" name="giveCity" id="give-city">
+    <i class="las la-search" id="submit"></i>
   </header>
+
+  <!-- ===City-Img + Temp/City=== -->
+
   <main>
-    <!-- City-Img + Temp/City -->
     <section>
       <div>
+        <!-- <i class="las la-wind"></i> -->
+        <!-- <i class="las la-sun"></i> -->
+        <!-- <i class="las la-bolt"></i> -->
+        <!-- <i class="las la-cloud"></i> -->
+        <i class="las la-cloud-showers-heavy"></i>
+      </div>
+      <div class="output">
         <p id="output-temperature">20°</p>
         <p id="output-city-name">Berlin</p>
       </div>
     </section>
-    <!-- Info-Area -->
-    <section>
+
+    <!-- ===Description=== -->
+
+    <section class="description">
+      <article>
+        <p id="description-heute">Heute ist Dienstag und heute wird es wolkig.Die Temperatur berträgt derzeit 6° ,die
+          Höchsttempertur wird bei 7°liegen.
+        </p>
+      </article>
+    </section>
+
+    <!-- ===Info-Area=== -->
+
+    <section class="info-area">
       <div>
-        <div id="sun-up">
+        <div>
           <p>SONNENAUFGANG</p>
-          <h3>04:53</h3>
+          <h3 id="sun-up">04:53</h3>
         </div>
-        <div id="rain">
-          <p>REGEN</p>
-          <h3>0%</h3>
+        <div>
+          <p>DRUCK</p>
+          <h3 id="pressure">1021 hPa</h3>
         </div>
-        <div id="wind">
+        <div>
           <p>WIND</p>
-          <h3>8km/h</h3>
+          <h3 id="wind">8km/h</h3>
+        </div>
+        <div>
+          <p>TEMP MAX</p>
+          <h3 id="temp-max">8°</h3>
         </div>
       </div>
       <div>
-        <div id="sun-down">
+        <div>
           <p>SONNENUNTERGANG</p>
-          <h3>22:12</h3>
+          <h3 id="sun-down">22:12</h3>
         </div>
-        <div id="humidity">
+        <div>
           <p>FEUCHTIGKEIT</p>
-          <h3>78%</h3>
+          <h3 id="humidity">78%</h3>
         </div>
-        <div id="temp-feeling">
+        <div>
           <p>GEFÜHLT</p>
-          <h3>8°</h3>
+          <h3 id="temp-feeling">8°</h3>
+        </div>
+        <div>
+          <p>TEMP MIN</p>
+          <h3 id="temp-min">4°</h3>
         </div>
       </div>
     </section>
-    <!-- Footer -->
+
+    <!-- ===Footer=== -->
+
     <footer>
       <h2>Create with</h2>
       <h2 class="animation"><i class="las la-heart"></i></h2>
     </footer>
   </main>
+
+  <!-- ===JS=== -->
+
   <script src="assets/js/main.js"></script>
 </body>
 
