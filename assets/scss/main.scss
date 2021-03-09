@@ -17,6 +17,10 @@ font-family: 'Shippori Mincho', serif;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
   }
+
+  @mixin border{
+    border-bottom: 1px solid #fff;  
+  }
   
   /*===============================
           Style Header
@@ -44,13 +48,14 @@ font-family: 'Shippori Mincho', serif;
           }
       }
   }
+
     /*===============================
             Description
   =================================*/
 
   .description{
     padding: 20px 20px;
-    border-bottom: 1px solid #fff;  
+    @include border; 
     p{
 
       }
@@ -65,21 +70,40 @@ font-family: 'Shippori Mincho', serif;
     display:flex;
     justify-content: space-evenly;
     text-align: left;
-    border-bottom: 1px solid #fff;
+    @include border; ;
     div {
         padding: 10px 0px;
         p{
             font-size: 10px;
-          }
-          
+          } 
       }
   }
   
   /*===============================
-            Footer
+        Footer with Animation
   =================================*/
   
   footer{
       padding: 20px 0px 0px 0px;
     font-family: 'Shippori Mincho', serif;
+    i{
+        animation-name: heartbeat;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+  }
+
+  @keyframes heartbeat {
+      0% , 100%{
+          transform: scale(1);
+      }
+      25%{
+          transform: scale(1.1)
+      }
+      50%{
+          transform: scale(1.2)
+      }
+      75%{
+          transform: scale(1.1)
+      }
   }
